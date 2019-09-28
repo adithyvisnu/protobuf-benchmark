@@ -1,0 +1,16 @@
+syntax="proto3"; // memberitahu protoc kalau file ini syntaxnya
+                 // proto3 karena bisa ada perbedaan kalau
+                 // versi protobuf yang dipakai proto2
+
+package main;    // file ini saya tempatkan di root project
+                 // kalau ada di tempat lain juga boleh
+                 // asal sesuai dengan nama packagenya aja
+
+message UserData {      // nama object yang akan di serializer
+    string user = 1;    // keynya user dan tipe valuenya string
+                        // setiap key dikasih number, kalau di
+                        // menurut saya dan saya setuju dengan
+                        // link ini di reason 2: 
+                        // https://codeclimate.com/blog/choose-protocol-buffers/
+    int32 age = 2;      // same as above
+}
